@@ -15,6 +15,6 @@ public class LC50_Powxn {
     }
 
     public static void main(String[] args) {
-        System.out.println(myPow(5,2^-31));
+        System.out.println(myPow(5,3));
     }
 }
