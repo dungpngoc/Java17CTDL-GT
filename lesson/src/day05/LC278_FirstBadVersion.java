@@ -15,10 +15,4 @@ public class LC278_FirstBadVersion {
         }
         return left;
     }
-    public static boolean isBadVersion(int version) {
-        if (version >= firstBadVersion(5)) {
-            return true;
-        }
-        return false;
-    }
 }
