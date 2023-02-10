@@ -4,7 +4,6 @@ public class LC344_ReverseString_Recursion {
     public static void reverseString(char[] s) {
         // Gọi hàm methodRecursion ( Truyền từ vị trí index 0, đến vị trí cuối cùng của mảng. Và truyền vào mảng s)
         methodRecursion(0, s.length - 1, s);
-
     }
 
     private static void methodRecursion(int left, int right, char[] s) {
