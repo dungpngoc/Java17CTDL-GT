@@ -5,6 +5,7 @@ public class MyLinkedList {
     int size;
     Node head;
 
+    // Lấy giá trị index trong danh sách. Nếu không có trả về -1
     public int get(int index) {
         if (index >= size) {
             return -1;
@@ -22,6 +23,7 @@ public class MyLinkedList {
         return -1;
     }
 
+    // Thêm vào đầu danh sách
     public void addAtHead(int val) {
         Node newHead = new Node(val);
         newHead.next = head;
@@ -30,6 +32,7 @@ public class MyLinkedList {
 
     }
 
+    // Thêm vào cuối danh sách
     public void addAtTail(int val) {
 
         Node newNode = new Node(val);
@@ -47,6 +50,7 @@ public class MyLinkedList {
 
     }
 
+    // Thêm vào giữa
     public void addAtIndex(int index, int val) {
         if (index == 0) {
             addAtHead(val);
@@ -69,6 +73,7 @@ public class MyLinkedList {
         }
     }
 
+    // Xoá ở vị trí index
     public void deleteAtIndex(int index) {
         if (index == 0) {
             head = head.next;
@@ -89,6 +94,7 @@ public class MyLinkedList {
 
     }
 
+    // Khai báo thuộc tính đối tượng
     static class Node {
         public int val;
         public Node next;
