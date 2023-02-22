@@ -1,12 +1,9 @@
 package day09;
 
 
-public class MyLinkedList {
+public class LC707_DesignLinkedList {
     int size;
     Node head;
-    public MyLinkedList() {
-
-    }
 
     public int get(int index) {
         if (index >= size) {
@@ -75,7 +72,7 @@ public class MyLinkedList {
     public void deleteAtIndex(int index) {
         if (index == 0) {
             head = head.next;
-        } else if (index <  size) {
+        } else if (index < size) {
             Node curr = head;
             int count = 0;
             while (curr.next != null) {
