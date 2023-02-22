@@ -16,7 +16,12 @@ class LC203_RemoveLinkedListElements {
             head = head.next;
         }
 
+        // Tạo con trỏ cur = head
         ListNode curNode = head;
+        // Trong khi danh sách > 2 thì... Nếu giá trị tiếp theo = val thì gán vị trí tiếp theo của con trỏ == vị trí sau khi xoá (next.next),
+        // lúc này curNode sẽ lặp lại cho đến khi điều kiện dừng.
+        // Hoặc là curNode.next != val thì sẽ vào else gán = biến tiếp theo của con trỏ
+        // Trả về head
         while (curNode != null && curNode.next != null) {
             if (curNode.next.val == val) {
                 curNode.next = curNode.next.next;
