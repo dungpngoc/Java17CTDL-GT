@@ -9,7 +9,7 @@ public class LC21_MergeTwoSortedLists {
             return l1;
         }
 
-        // Cái này dùng đệ quy mà a chưa hiểu logic. Hic. A đi ngủ đã mai có time giải thích cho a nhớ . Cám ơn e !!!
+        // So sánh l1.val và l2.val
         if (l1.val < l2.val) {
             l1.next = mergeTwoLists(l1.next, l2);
             return l1;
