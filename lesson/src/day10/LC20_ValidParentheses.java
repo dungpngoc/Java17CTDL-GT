@@ -5,6 +5,9 @@ import java.util.Stack;
 public class LC20_ValidParentheses {
     public boolean isValid(String s) {
         // Tạo đối tượng stack kiểu char để kiểm tra từng phần tử của chuỗi truyền vào
+        // ()[]{}
+        // stack : 1 -> (
+        //         2 -> c= ) -> else topPeek = (
         Stack<Character> stack = new Stack<>();
 
         for (int i = 0; i < s.length(); i++) {
@@ -15,14 +18,16 @@ public class LC20_ValidParentheses {
                 if (stack.isEmpty()) {
                     return false;
                 }
-                char topPeek = stack.peek();    // Đến đây chưa hiểu. Theo a nghĩ thì trong điều kiện if đáng nhẽ c = ngoặc mở và topPeek phải là ngoặc đóng chứ nhỉ?
-                if (c == ')' && topPeek == '(' || c == '}' && topPeek == '{' || c == ']' && topPeek == '[') {
+                char topPeek = stack.peek();
+                if (c == ')' && topPeek == '('
+                        || topPeek == '{' && c == '}'
+                        ||  topPeek == '[' && c == ']') {
                     stack.pop();
                 } else {
                     return false;
                 }
             }
         }
-        return stack.isEmpty();
+        return stack.empty();
     }
 }
