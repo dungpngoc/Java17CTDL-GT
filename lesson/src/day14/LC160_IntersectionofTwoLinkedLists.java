@@ -8,15 +8,15 @@ public class LC160_IntersectionofTwoLinkedLists {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         HashSet<ListNode> set = new HashSet<>();    // Tạo mảng HashSet để chứa các node
         // Thêm lần lượt các node từ ListNode A vào set trước
-        while(headA != null){
+        while (headA != null) {
             set.add(headA);
             headA = headA.next;
         }
 
-        while(headB != null){
-            if(set.contains(headB)){        // Duyệt lần lượt ListNode B, nếu set chứa node B thì return luôn headB là điểm giao nhau
+        while (headB != null) {
+            if (set.contains(headB)) {        // Duyệt lần lượt ListNode B, nếu set chứa node B thì return luôn headB là điểm giao nhau
                 return headB;
-            }else{
+            } else {
                 headB = headB.next;         // Nếu ko ta kiểm tra tiếp
             }
         }
